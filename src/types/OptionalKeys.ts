@@ -25,3 +25,5 @@ type RequiredKeys<T> = {
 type RequiredObject<T> = {
   [k in keyof T as IsRequired<T, k> extends true ? k : never]-?: T[k];
 };
+
+export type { OptionalKeys, OptionalObject, RequiredKeys, RequiredObject };
